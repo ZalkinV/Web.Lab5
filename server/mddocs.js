@@ -24,6 +24,13 @@ router.post("/", async (req, res) =>
     res.status(201).send();
 });
 
+router.delete("/:id", async (req, res) =>
+{
+    const docs = await getDocsCollection();
+    await docs.deleteOne({_id : new mongodb.ObjectID(req.params.id)})
+    res.status(200).send();
+});
+
 
 async function getDocsCollection()
 {
