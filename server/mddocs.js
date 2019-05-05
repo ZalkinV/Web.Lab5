@@ -13,6 +13,17 @@ router.get("/", async (req, res) =>
     res.send(await docs.find({}).toArray());
 });
 
+router.post("/", async (req, res) =>
+{
+    const docs = await getDocsCollection();
+    await docs.insertOne(
+        {
+            name: req.body.name,
+            text: req.body.text
+        });
+    res.status(201).send();
+});
+
 
 async function getDocsCollection()
 {
