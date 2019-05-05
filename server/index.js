@@ -3,6 +3,8 @@ const path = require("path");
 const app = express();
 
 
+app.use(express.json());
+
 const mddocs = require("./mddocs");
 app.use("/api/mddocs", mddocs);
 
