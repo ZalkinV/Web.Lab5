@@ -13,10 +13,10 @@ router.get("/", (req, res) =>
 });
 
 
-function getDocsCollection()
+async function getDocsCollection()
 {
-    const connection = mongodb.MongoClient.connect(connectionString);
-    return connection.db("mddocs").collection("docs");
+    const client = await mongodb.MongoClient.connect(connectionString, { useNewUrlParser: true });
+    return client.db("mddocs").collection("docs");
 }
 
 module.exports = router;
