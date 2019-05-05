@@ -7,9 +7,10 @@ const connectionString = "mongodb://localhost:27017";
 const router = express.Router();
 
 
-router.get("/", (req, res) => 
+router.get("/", async (req, res) => 
 {
-    res.send("Hello, World!");
+    const docs = await getDocsCollection();
+    res.send(await docs.find({}).toArray());
 });
 
 
