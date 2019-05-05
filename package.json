@@ -4,7 +4,8 @@
   "description": "Markdown editor (MongoDB + Express.js + Vue.js + Node.js)",
   "main": "index.js",
   "scripts": {
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "devServer": "nodemon server/index.js"
   },
   "author": "Viktor Zalkin",
   "license": "ISC",
