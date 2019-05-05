@@ -1,0 +1,11 @@
+{
+  "name": "mdeditor",
+  "version": "1.0.0",
+  "description": "Markdown editor (MongoDB + Express.js + Vue.js + Node.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viktor Zalkin",
+  "license": "ISC"
+}
