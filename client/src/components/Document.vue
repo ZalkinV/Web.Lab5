@@ -45,6 +45,11 @@ export default
     {
       await DocumentService.insertDocument(this.name);
       this.documents = await DocumentService.getDocuments();
+    },
+    async deleteDocument(id)
+    {
+      await DocumentService.deleteDocument(id);
+      this.documents = await DocumentService.getDocuments();
     }
   }
 }
