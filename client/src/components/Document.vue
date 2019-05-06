@@ -8,7 +8,7 @@
     v-for="document in documents"
     v-bind:item="document"
     v-bind:key="document._id">
-      <p><b>{{ document.name }}</b></p>
+      <p><b>{{ document.name }} </b><a v-on:click="deleteDocument(document._id)">Delete</a></p>
     </div>
   </div>
 </template>
