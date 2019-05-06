@@ -1,17 +1,19 @@
 <template>
-  <div class="documents-container">
-    <div class="document-create">
-      <input type="text" v-model="name" placeholder="Document name">
-      <button class="btn btn-success btn-sm" v-on:click="createDocument()">Create</button>
-    </div>
-    <div class="document"
-    v-for="document in documents"
-    v-bind:item="document"
-    v-bind:key="document._id">
-      <p>
-        <b>{{ document.name }} </b>
-        <button class="btn btn-sm btn-danger" v-on:click="deleteDocument(document._id)">Delete</button>
-      </p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <input type="text" v-model="name" placeholder="Document name">
+        <button class="btn btn-success btn-sm" v-on:click="createDocument()">Create</button>
+        <div class="document"
+        v-for="document in documents"
+        v-bind:item="document"
+        v-bind:key="document._id">
+          <p>
+            <b>{{ document.name }} </b>
+            <button class="btn btn-sm btn-danger" v-on:click="deleteDocument(document._id)">Delete</button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
