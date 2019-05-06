@@ -30,6 +30,11 @@ class DocumentService
                 text: ""
             });
     }
+
+    static deleteDocument(id)
+    {
+        return axios.delete(url + "/" + id);
+    }
 }
 
 export default DocumentService;
