@@ -5,7 +5,16 @@
 <script>
 export default
 {
-  name: 'Document'
+  name: 'Document',
+  data()
+  {
+    return {
+      documents: [],
+      error: "",
+      name: "",
+      text: ""
+    };
+  }
 }
 </script>
 
