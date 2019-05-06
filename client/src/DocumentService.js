@@ -22,6 +22,24 @@ class DocumentService
         });
     }
 
+    static getDocument(id)
+    {
+        return new Promise(async (resolve, reject) => 
+        {
+            try
+            {
+                const result = await axios.get(url);
+                const data = result.data;
+                const document = data.find(doc => doc._id === id);
+                resolve(document);
+            }
+            catch (e)
+            {
+                reject(e);
+            }
+        });
+    }
+
     static insertDocument(name)
     {
         return axios.post(url,
