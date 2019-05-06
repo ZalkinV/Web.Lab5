@@ -18,6 +18,8 @@
         <textarea class="w-100" rows="15"></textarea>
         <button class="btn btn-success w-100">Save</button>
       </div>
+      <div class="col-md-5 border border-secondary">
+      </div>
     </div>
   </div>
 </template>
