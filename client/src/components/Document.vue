@@ -4,7 +4,8 @@
     v-for="document in documents"
     v-bind:item="document"
     v-bind:key="document._id">
-    </div> 
+      <p><b>{{ document.name }}</b></p>
+    </div>
   </div>
 </template>
 
