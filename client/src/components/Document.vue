@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import DocumentService from "../DocumentService.js";
+
 export default
 {
   name: 'Document',
@@ -14,6 +16,17 @@ export default
       name: "",
       text: ""
     };
+  },
+  async created()
+  {
+    try
+    {
+      this.documents = await DocumentService.getDocuments();
+    }
+    catch(e)
+    {
+      this.error = e.message;
+    }
   }
 }
 </script>
