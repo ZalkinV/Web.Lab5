@@ -34,6 +34,14 @@ export default
     {
       this.error = e.message;
     }
+  },
+  methods:
+  {
+    async createDocument()
+    {
+      await DocumentService.insertDocument(this.name);
+      this.documents = await DocumentService.getDocuments();
+    }
   }
 }
 </script>
