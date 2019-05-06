@@ -21,6 +21,15 @@ class DocumentService
             }
         });
     }
+
+    static insertDocument(name)
+    {
+        return axios.post(url,
+            {
+                name,
+                text: ""
+            });
+    }
 }
 
 export default DocumentService;
