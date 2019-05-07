@@ -18,7 +18,7 @@
         <textarea class="w-100" rows="15" v-model="text"></textarea>
         <button class="btn btn-success w-100" v-on:click="saveDocument()">Save</button>
       </div>
-      <div class="col-md-5 border border-secondary">
+      <div class="col-md-5 border border-secondary" v-html="compiledMarkdown">
       </div>
     </div>
   </div>
@@ -26,6 +26,7 @@
 
 <script>
 import DocumentService from "../DocumentService.js";
+const marked = require("marked");
 
 export default
 {
@@ -49,6 +50,12 @@ export default
     catch(e)
     {
       this.error = e.message;
+    }
+  },
+  computed: {
+    compiledMarkdown: function ()
+    {
+      return marked(this.text, { sanitize: true })
     }
   },
   methods:
