@@ -9,13 +9,13 @@
         v-bind:item="document"
         v-bind:key="document._id">
           <p>
-            <b>{{ document.name }} </b>
+            <a v-on:click="openDocument(document._id)">{{ document.name }} </a>
             <button class="btn btn-sm btn-danger" v-on:click="deleteDocument(document._id)">Delete</button>
           </p>
         </div>
       </div>
       <div class="col-md-5">
-        <textarea class="w-100" rows="15"></textarea>
+        <textarea class="w-100" rows="15" v-model="text"></textarea>
         <button class="btn btn-success w-100">Save</button>
       </div>
       <div class="col-md-5 border border-secondary">
