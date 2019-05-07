@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-3">
-        <input type="text" v-model="name" placeholder="Document name">
+        <input class="mb-4" type="text" v-model="name" placeholder="Document name">
         <button class="btn btn-success btn-sm" v-on:click="createDocument()">Create</button>
         <div class="document"
         v-for="document in documents"
