@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-5">
         <textarea class="w-100" rows="15" v-model="text"></textarea>
-        <button class="btn btn-success w-100">Save</button>
+        <button class="btn btn-success w-100" v-on:click="saveDocument()">Save</button>
       </div>
       <div class="col-md-5 border border-secondary">
       </div>
