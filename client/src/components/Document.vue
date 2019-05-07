@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-lg-3">
         <input type="text" v-model="name" placeholder="Document name">
         <button class="btn btn-success btn-sm" v-on:click="createDocument()">Create</button>
         <div class="document"
@@ -14,11 +14,11 @@
           </p>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-4">
         <textarea class="w-100" rows="15" v-model="text"></textarea>
         <button class="btn btn-success w-100" v-on:click="saveDocument()">Save</button>
       </div>
-      <div class="col-md-5 border border-secondary" v-html="compiledMarkdown">
+      <div class="col-lg-4 border border-secondary" v-html="compiledMarkdown">
       </div>
     </div>
   </div>
