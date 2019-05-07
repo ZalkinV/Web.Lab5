@@ -9,7 +9,7 @@
         v-bind:item="document"
         v-bind:key="document._id">
           <p>
-            <a v-on:click="openDocument(document._id)">{{ document.name }} </a>
+            <a v-bind:class="{'font-weight-bold': document._id == id}" v-on:click="openDocument(document._id)">{{ document.name }} </a>
             <button class="btn btn-sm btn-danger" v-on:click="deleteDocument(document._id)">Delete</button>
           </p>
         </div>
