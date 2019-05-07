@@ -36,7 +36,8 @@ export default
       documents: [],
       error: "",
       name: "",
-      text: ""
+      text: "",
+      id: 0
     };
   },
   async created()
