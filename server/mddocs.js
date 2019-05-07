@@ -24,6 +24,20 @@ router.post("/", async (req, res) =>
     res.status(201).send();
 });
 
+router.post("/:id", async (req, res) =>
+{
+    const docs = await getDocsCollection();
+    await docs.updateOne(
+        {_id : new mongodb.ObjectID(req.params.id)},
+        {
+            $set:
+            {
+                text: req.body.text,
+            }
+        });
+    res.status(201).send();
+});
+
 router.delete("/:id", async (req, res) =>
 {
     const docs = await getDocsCollection();
