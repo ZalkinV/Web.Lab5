@@ -68,6 +68,10 @@ export default
       const document = await DocumentService.getDocument(id);
       this.text = document.text;
       this.id = document._id;
+    },
+    async saveDocument()
+    {
+      await DocumentService.saveDocument(this.id, this.text);
     }
   }
 }
