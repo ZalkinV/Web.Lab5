@@ -53,6 +53,14 @@ class DocumentService
     {
         return axios.delete(url + "/" + id);
     }
+
+    static saveDocument(id, text)
+    {
+        return axios.post(url + "/" + id,
+            {
+                text
+            });
+    }
 }
 
 export default DocumentService;
