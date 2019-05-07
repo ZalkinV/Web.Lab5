@@ -62,6 +62,12 @@ export default
     {
       await DocumentService.deleteDocument(id);
       this.documents = await DocumentService.getDocuments();
+    },
+    async openDocument(id)
+    {
+      const document = await DocumentService.getDocument(id);
+      this.text = document.text;
+      this.id = document._id;
     }
   }
 }
